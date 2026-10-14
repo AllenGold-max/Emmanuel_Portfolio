@@ -91,7 +91,17 @@
 										  margin-top: 10px;
 										  font-size: 1.1em;
 										}
-									  </style>
+									
+/* Layout fixes: on laptop-width screens the sidebar takes space, so show the skills in one column
+   (two columns squeezed the main area and pushed the sidebar partly off-screen) */
+#main { min-width: 0; }
+#main img { max-width: 100%; }
+@media screen and (min-width: 1281px) and (max-width: 1600px) {
+  #main .features { margin: 0 0 2em 0; width: 100%; }
+  #main .features article { width: 100%; margin: 0 0 3em 0 !important; }
+  #main .features article:last-child { margin-bottom: 0 !important; }
+}
+  </style>
 									  
 									  <h2>List of Certifications</h2>
 									  <div class="certifications">
@@ -355,7 +365,6 @@
 													<li><a href="https://github.com/AllenGold-max/Bike-Sales-Analysis" class="button">Click here to view project</a></li>
 												</ul>
 										</article>
-									</div>
 								</section>
 						</div>
 					</div>
